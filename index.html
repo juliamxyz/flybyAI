@@ -544,8 +544,8 @@ section{position:relative}
 <nav class="nav" id="navbar">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <img src="flybylogo.png" alt="Flyby logo" width="34" height="34" style="object-fit:contain"/>
-      flyby
+      <img src="flybylogo.png" alt="Flyby AI logo" width="34" height="34" style="object-fit:contain"/>
+      flyby AI
     </a>
     <ul class="nav-links">
       <li><a href="#features">Platform</a></li>
@@ -584,7 +584,7 @@ section{position:relative}
     <h1 class="h-hero reveal d1">Business Travel,<br/><span class="blue-accent">Built for You.</span></h1>
     <p class="hero-sub reveal d2">Flyby plans, books, and manages your corporate trips — and handles expenses automatically.</p>
     <div class="hero-ctas reveal d3">
-      <a href="#waitlist" class="btn btn-blue btn-lg">Join the Waitlist</a>
+      <button type="button" class="btn btn-blue btn-lg" data-tally-open="zxdvlE" data-tally-layout="modal" data-tally-width="540" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Join the Waitlist</button>
       <a href="#how" class="btn btn-outline btn-lg">See it in action</a>
     </div>
   </div>
@@ -1284,42 +1284,6 @@ section{position:relative}
   </div>
 </section>
 
-<!-- ══════════════════════════════ TESTIMONIALS ══════════════════════════════ -->
-<section class="testimonials">
-  <div class="testimonials-header">
-    <div class="label blue-accent reveal" style="margin-bottom:.75rem">What teams say</div>
-    <h2 class="h-section reveal d1">Loved by the people<br/>who travel most.</h2>
-  </div>
-  <div class="container">
-    <div class="testimonials-grid">
-      <div class="testi-card reveal">
-        <div class="testi-quote-mark">"</div>
-        <p class="testi-text">Flyby cut our travel planning time from two days to under an hour. The AI just gets what we need — policy, budget, preferences, everything. Our ops team finally has their lives back.</p>
-        <div class="testi-author">
-          <div class="testi-av" style="background:#4A90D9">SK</div>
-          <div>
-            <div class="testi-name">Sarah Kim</div>
-            <div class="testi-role">Head of Operations, Stripe</div>
-            <div class="testi-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
-      <div class="testi-card reveal d1">
-        <div class="testi-quote-mark">"</div>
-        <p class="testi-text">Our CFO loves the spend intelligence dashboard. We finally have real visibility into travel costs before they happen — not after the credit card bill arrives at month end.</p>
-        <div class="testi-author">
-          <div class="testi-av" style="background:#1A3A5C">DM</div>
-          <div>
-            <div class="testi-name">Daniel Moore</div>
-            <div class="testi-role">Finance Director, Linear</div>
-            <div class="testi-stars">★★★★★</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══════════════════════════════ WAITLIST ══════════════════════════════ -->
 <section class="waitlist" id="waitlist">
   <div class="waitlist-bg"></div>
@@ -1327,10 +1291,9 @@ section{position:relative}
     <div class="waitlist-eyebrow reveal">Early access · Limited spots</div>
     <h2 class="reveal d1">Fly smarter,<br/>starting now.</h2>
     <p class="waitlist-sub reveal d2">We're early. Your feedback shapes what we build next. Join the waitlist and be first to fly.</p>
-    <form class="waitlist-form reveal d3" onsubmit="handleWaitlist(event)">
-      <input class="waitlist-input" type="email" id="waitlistEmail" placeholder="you@company.com" required/>
-      <button type="submit" class="btn btn-blue btn-lg">Join Waitlist →</button>
-    </form>
+    <div class="waitlist-form reveal d3">
+      <button type="button" class="btn btn-blue btn-lg" data-tally-open="zxdvlE" data-tally-layout="modal" data-tally-width="540" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Join Waitlist →</button>
+    </div>
     <div class="waitlist-note reveal d4" id="waitlistMsg">No spam. Unsubscribe anytime. We respect your inbox.</div>
   </div>
 </section>
@@ -1341,8 +1304,8 @@ section{position:relative}
     <div class="footer-top">
       <div class="footer-brand">
         <div class="logo-mark">
-          <img src="flybylogo.png" alt="Flyby logo" width="30" height="30" style="object-fit:contain;filter:brightness(0) invert(1)"/>
-          <span>flyby</span>
+          <img src="flybylogo.png" alt="Flyby AI logo" width="30" height="30" style="object-fit:contain"/>
+          <span>flyby AI</span>
         </div>
         <p>AI-powered corporate travel and expense management. Plan trips in seconds, not hours.</p>
       </div>
@@ -1379,7 +1342,7 @@ section{position:relative}
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Flyby, Inc. All rights reserved.</span>
+      <span>© 2026 Flyby AI, Inc. All rights reserved.</span>
       <div class="footer-socials">
         <div class="footer-social" title="Twitter/X">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -1516,19 +1479,6 @@ document.querySelectorAll('.m-nav-item').forEach(item => {
   });
 });
 
-// ── Waitlist form
-function handleWaitlist(e) {
-  e.preventDefault();
-  const email = document.getElementById('waitlistEmail').value;
-  const msg = document.getElementById('waitlistMsg');
-  const btn = e.target.querySelector('button');
-  btn.textContent = '✓ You\'re on the list!';
-  btn.style.background = '#22c55e';
-  btn.disabled = true;
-  msg.textContent = `We'll be in touch at ${email}. Thank you for joining!`;
-  msg.style.color = '#7aa8d8';
-}
-
 // ── Carousel ─────────────────────────────────────────────────
 (function() {
   const slides      = document.querySelectorAll('.c-slide');
@@ -1630,5 +1580,7 @@ window.addEventListener('scroll', () => {
   });
 }, { passive: true });
 </script>
+<!-- Tally embed widget -->
+<script async src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
